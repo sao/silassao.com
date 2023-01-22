@@ -1,12 +1,10 @@
-import Nav from './nav'
-import Content from './content'
+import Nav from './Nav'
+import Content from './Content'
 
 export default function Layout({ children }) {
     return (
         <>
-            <Nav>
-                
-            </Nav>
+            <Nav />
             <Content>
                 { children }
             </Content>
