@@ -1,5 +1,7 @@
+About.title = 'Silas Sao - About';
+
 export default function About() {
     return (
-        <div>test</div>
+        <div>about</div>
     )
 }

@@ -1,6 +1,6 @@
 import Link from "next/link"
 
-export default function Nav(props) {
+export default function Nav() {
     return (
         <nav className="bg-zinc-600">
             <ul>
