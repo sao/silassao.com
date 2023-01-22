@@ -2,7 +2,7 @@ import Link from "next/link"
 
 export default function Nav(props) {
     return (
-        <nav class="bg-zinc-600">
+        <nav className="bg-zinc-600">
             <ul>
                 <li><Link href="/">Home</Link></li>
                 <li><Link href="/about">About</Link></li>
