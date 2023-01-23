@@ -9,8 +9,12 @@ const inter = Inter({ subsets: ['latin'] })
 export default function Layout({children}) {
     return (
         <>
+        <div className="grid grid-cols-12 gap-4">
             <Nav />
-            { children }
+            <Content>
+                {children}
+            </Content>
+        </div>
         </>
     )
 }

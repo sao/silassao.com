@@ -1,9 +1,9 @@
-Home.title = 'Silas Sao - Design Leader, Coach, and Advisor';
+Home.title = 'Silas Sao - Design Leader, Coach, and Facilitator';
 
 export default function Home() {
   return (
     <>
-      <div>index</div>
+      <div>Welcome Home!</div>
     </>
   )
 }

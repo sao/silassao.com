@@ -4,7 +4,7 @@ export default function Document() {
   return (
     <Html lang="en">
       <Head />
-      <body className="grid grid-cols-12 gap-4">
+      <body>
         <Main />
         <NextScript />
       </body>
