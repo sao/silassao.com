@@ -19,7 +19,7 @@ export default function Home() {
           {/* Hero Section */}
           <div className="mb-4 sm:mb-8">
             <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold leading-tight tracking-[-2.1px]">
-              My name is Silas. I'm a software engineer turned product designer, working in AI.
+              My name is Silas. I'm a software engineer turned product designer, working on AI.
             </h1>
           </div>
 
@@ -30,7 +30,7 @@ export default function Home() {
             </p>
             <p className="text-base text-gray-300">
               Currently, you can find me leading design at IBM, working on agentic developer tools, or writing the next post for{" "}
-              <a href="#" className="underline hover:no-underline text-white">
+              <a href="http://userinference.substack.com/" target="_blank" className="underline hover:no-underline text-white">
                 my newsletter
               </a>
               .
@@ -39,11 +39,11 @@ export default function Home() {
 
           {/* Social Links */}
           <div className="mb-12 sm:mb-16">
-            <div className="flex flex-wrap gap-4 sm:gap-6 text-base sm:text-lg">
-              <a href="#" className="underline hover:no-underline">LinkedIn</a>
-              <a href="#" className="underline hover:no-underline">X</a>
-              <a href="#" className="underline hover:no-underline">Instagram</a>
-              <a href="#" className="underline hover:no-underline">Substack</a>
+            <div className="flex flex-wrap gap-4 sm:gap-6 text-base">
+              <a href="https://www.linkedin.com/in/silassao/" target="_blank" className="underline hover:no-underline">LinkedIn</a>
+              <a href="https://x.com/silassao" target="_blank" className="underline hover:no-underline">X</a>
+              <a href="https://www.instagram.com/silassao/" target="_blank" className="underline hover:no-underline">Instagram</a>
+              <a href="http://userinference.substack.com/" target="_blank" className="underline hover:no-underline">Substack</a>
             </div>
           </div>
 
