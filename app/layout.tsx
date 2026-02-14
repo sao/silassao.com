@@ -1,17 +1,18 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { geistPixel, geistMono } from "@/lib/fonts";
+import Nav from "@/components/nav";
+import Footer from "@/components/footer";
 import "./globals.css";
 
-const inter = Inter({
-  variable: "--font-inter",
-  subsets: ["latin"],
-});
-
 export const metadata: Metadata = {
-  title: "Silas Sao - Product and Design Leader",
-  description: "Software engineer turned product designer, working on agentic developer tools.",
+  title: {
+    default: "silas sao",
+    template: "%s — silas sao",
+  },
+  description:
+    "Software engineer turned product designer, working on AI.",
   icons: {
-    icon: '/favicon.svg',
+    icon: "/favicon.svg",
   },
 };
 
@@ -23,9 +24,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${inter.variable} antialiased`}
+        className={`${geistPixel.variable} ${geistMono.variable} antialiased`}
       >
-        {children}
+        <Nav />
+        <main>{children}</main>
+        <Footer />
       </body>
     </html>
   );

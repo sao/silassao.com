@@ -1,0 +1,34 @@
+---
+title: "design systems at scale"
+date: "2026-02-10"
+description: "lessons from building and maintaining design systems across large organizations."
+---
+
+design systems are one of those things that sound simple in theory but become remarkably complex at scale. after years of working on them across different organizations, here are the patterns that actually work.
+
+## start with principles, not components
+
+the temptation is to start building buttons and inputs. resist it. start with the principles that will guide every decision downstream.
+
+- what does consistency mean for your product?
+- where is flexibility more important than uniformity?
+- who are the consumers of your system?
+
+## tokens are the foundation
+
+design tokens — colors, spacing, typography — are the atomic layer everything else builds on. get these right and the rest follows.
+
+```css
+:root {
+  --color-fg: #ffffff;
+  --color-fg-muted: #a0a0a0;
+  --color-surface: #0a0a0a;
+  --spacing-unit: 4px;
+}
+```
+
+## contribution models matter
+
+the best design systems are ones that teams actually want to contribute to. make the contribution path obvious and friction-free.
+
+building a design system is never done. it evolves with your product, your team, and your understanding of the problem space.

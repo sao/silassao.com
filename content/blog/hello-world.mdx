@@ -1,0 +1,35 @@
+---
+title: "hello world"
+date: "2026-02-13"
+description: "first post — on building a terminal-inspired portfolio and why personal sites still matter."
+---
+
+this is the first post on my new site. i rebuilt it from scratch using next.js, mdx, and a terminal-inspired design language.
+
+## why a personal site
+
+in an era of social platforms, having your own corner of the internet still matters. it's a place to think, build, and share without constraints.
+
+## the stack
+
+this site is built with:
+
+- **next.js 16** with static export
+- **mdx** for content authoring
+- **tailwind css 4** for styling
+- **shiki** for syntax highlighting
+
+here's what a code block looks like:
+
+```typescript title="lib/content.ts"
+export function getBlogPosts(): BlogPost[] {
+  return readMdxFiles("blog")
+    .map(({ slug, raw }) => {
+      const { data, content } = matter(raw);
+      return { slug, title: data.title, content };
+    })
+    .sort((a, b) => (a.date > b.date ? -1 : 1));
+}
+```
+
+more to come.
