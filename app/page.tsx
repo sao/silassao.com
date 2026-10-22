@@ -29,7 +29,7 @@ export default function Home() {
               I was born in Hawaii and now live in the Pacific Northwest. As a lifelong learner, I'm completely self-taught. I devote my time to experimenting with emerging technologies and exploring how they shape human behavior. Being around passionate builders and makers energizes me. I have a high bar for quality and am obsessed with every detail.
             </p>
             <p className="text-base text-gray-300">
-              Currently, you can find me leading design at IBM, working on agentic developer tools, or writing the next post for{" "}
+              Currently, you can find me as Head of Design at Supabase, or writing the next post for{" "}
               <a href="http://userinference.substack.com/" target="_blank" className="underline hover:no-underline text-white">
                 my newsletter
               </a>
