@@ -73,22 +73,22 @@ export function WorkList({ roles }: { roles: Role[] }) {
     const r = rowBox(i);
     const movingDown = wasExpanded && prev !== null && i > prev;
     const movingUp = wasExpanded && prev !== null && i < prev;
-    const lead = spring(520, 42);
-    const trail = spring(200, 24);
-    const settle = spring(320, 32);
+    const lead = spring(690, 48);
+    const trail = spring(265, 28);
+    const settle = spring(420, 37);
 
     animate(top, r.t, movingUp ? lead : movingDown ? trail : settle);
     animate(bottom, r.t + r.h, movingDown ? lead : movingUp ? trail : settle);
-    animate(left, r.l, spring(140, 22));
-    animate(width, r.w, spring(90, 18));
-    animate(radius, 4, spring(220, 30));
+    animate(left, r.l, spring(185, 25));
+    animate(width, r.w, spring(120, 21));
+    animate(radius, 4, spring(290, 35));
   }
 
   function leave() {
     if (current.current === null || !expanded.current) return;
     expanded.current = false;
     const c = circleBox(current.current);
-    const drain = spring(380, 40);
+    const drain = spring(500, 46);
     animate(top, c.t, drain);
     animate(bottom, c.b, drain);
     animate(left, c.l, drain);
