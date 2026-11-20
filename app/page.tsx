@@ -1,53 +1,85 @@
 import Image from "next/image";
+import { WorkList } from "./work-list";
+
+type Role = {
+  company: string;
+  title: string;
+  years: string;
+  href: string;
+};
+
+const work: Role[] = [
+  { company: "Supabase", title: "Head of Design", years: "2026 – Now", href: "https://supabase.com" },
+  { company: "IBM", title: "Design Director, Data and AI", years: "2025 – 2026", href: "https://ibm.com" },
+  { company: "DataStax", title: "Head of Product Experience", years: "2020 – 2025", href: "https://datastax.com" },
+  { company: "New Relic", title: "Director of Product Design", years: "2019 – 2020", href: "https://newrelic.com" },
+  { company: "Moovel", title: "Director of Product Design", years: "2018 – 2019", href: "https://moovelus.com" },
+  { company: "Cloudability", title: "Lead Product Designer", years: "2017 – 2018", href: "https://cloudability.com" },
+];
+
+const socials = [
+  { label: "X", href: "https://x.com/silassao" },
+  { label: "LinkedIn", href: "https://www.linkedin.com/in/silassao/" },
+  { label: "Instagram", href: "https://www.instagram.com/silassao/" },
+  { label: "Substack", href: "http://userinference.substack.com/" },
+];
+
+const link =
+  "text-bright underline decoration-stroke-strong underline-offset-4 transition-colors hover:decoration-bright";
+
+function SectionLabel({ children }: { children: React.ReactNode }) {
+  return <h2 className="mb-4 text-sm lowercase text-faint">{children}</h2>;
+}
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-black text-white">
-      <main className="px-4 py-8 sm:px-8 sm:py-14 md:px-16">
-        <div className="max-w-4xl">
-          {/* Logo */}
-          <div className="mb-8 sm:mb-12">
-            <Image
-              src="/logo.svg"
-              alt="Silas Sao"
-              width={120}
-              height={40}
-              className="h-12 sm:h-16 w-auto"
-            />
-          </div>
+    <div className="min-h-screen bg-canvas text-content">
+      <main className="max-w-[528px] p-6 lowercase sm:max-w-[576px] sm:p-12 md:max-w-[608px] md:p-16">
+        <Image src="/logo.svg" alt="Silas Sao" width={120} height={40} className="mb-10 h-10 w-auto" />
 
-          {/* Hero Section */}
-          <div className="mb-4 sm:mb-8">
-            <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold leading-tight tracking-[-2.1px]">
-              My name is Silas. I'm a software engineer turned product designer, working on AI.
-            </h1>
-          </div>
+        <h1 className="mb-8 text-base">
+          <span className="font-semibold text-bright">Silas Sao</span>{" "}
+          <span className="text-content">is an engineer turned designer.</span>
+        </h1>
 
-          {/* Bio Section */}
-          <div className="mb-12 sm:mb-16 max-w-3xl">
-            <p className="mb-4 text-base text-gray-300">
-              I was born in Hawaii and now live in the Pacific Northwest. As a lifelong learner, I'm completely self-taught. I devote my time to experimenting with emerging technologies and exploring how they shape human behavior. Being around passionate builders and makers energizes me. I have a high bar for quality and am obsessed with every detail.
-            </p>
-            <p className="text-base text-gray-300">
-              Currently you can find me leading design at <a href="https://supabase.com" target="_blank" className="underline hover:no-underline text-white">Supabase</a>.
-            </p>
-          </div>
-
-          {/* Social Links */}
-          <div className="mb-12 sm:mb-16">
-            <div className="flex flex-wrap gap-4 sm:gap-6 text-base">
-              <a href="https://x.com/silassao" target="_blank" className="underline hover:no-underline">X</a>
-              <a href="https://www.linkedin.com/in/silassao/" target="_blank" className="underline hover:no-underline">LinkedIn</a>
-              <a href="https://www.instagram.com/silassao/" target="_blank" className="underline hover:no-underline">Instagram</a>
-              <a href="http://userinference.substack.com/" target="_blank" className="underline hover:no-underline">Substack</a>
-            </div>
-          </div>
-
-          {/* Footer */}
-          <div className="text-xs sm:text-sm text-gray-400">
-            © Silas Sao 2025
-          </div>
+        <div className="mb-10 space-y-4 text-base leading-relaxed text-content">
+          <p>
+            I&apos;m head of design at{" "}
+            <a href="https://supabase.com" target="_blank" className={link}>Supabase</a>.
+          </p>
+          <p>
+            Previously, I was a design director for Data and AI at{" "}
+            <a href="https://ibm.com" target="_blank" className={link}>IBM</a>, working on agentic
+            experiences and design systems.
+          </p>
+          <p>
+            Before that, I built the product experience team at{" "}
+            <a href="https://datastax.com" target="_blank" className={link}>DataStax</a>,
+            spanning brand and product design, technical content, and product analytics. At{" "}
+            <a href="https://newrelic.com" target="_blank" className={link}>New Relic</a>, I led
+            design for APM, infrastructure, and logs.
+          </p>
+          <p>
+            I was born in Hawaii and now live in the Pacific Northwest. I&apos;m completely
+            self-taught, and I spend my time experimenting with emerging technologies and exploring
+            how they shape human behavior.
+          </p>
         </div>
+
+        <div className="mb-16 flex flex-wrap gap-x-5 gap-y-2 text-sm">
+          {socials.map((s) => (
+            <a key={s.label} href={s.href} target="_blank" className={link}>
+              {s.label}
+            </a>
+          ))}
+        </div>
+
+        <section className="mb-16">
+          <SectionLabel>work</SectionLabel>
+          <WorkList roles={work} />
+        </section>
+
+        <footer className="text-xs text-faint">© Silas Sao {new Date().getFullYear()}</footer>
       </main>
     </div>
   );
