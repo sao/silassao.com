@@ -9,7 +9,7 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: "silas sao - an engineer turned designer",
-  description: "Software engineer turned product designer, leading design at Supabase.",
+  description: "silas sao is an engineer turned designer and head of design at supabase.",
   icons: {
     icon: '/favicon.svg',
   },
