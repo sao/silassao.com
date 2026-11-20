@@ -9,7 +9,7 @@ type Role = {
 };
 
 const work: Role[] = [
-  { company: "Supabase", title: "Head of Design", years: "2026 – Now", href: "https://supabase.com" },
+  { company: "Supabase", title: "Head of Design", years: "Currently", href: "https://supabase.com" },
   { company: "IBM", title: "Design Director, Data and AI", years: "2025 – 2026", href: "https://ibm.com" },
   { company: "DataStax", title: "Head of Product Experience", years: "2020 – 2025", href: "https://datastax.com" },
   { company: "New Relic", title: "Director of Product Design", years: "2019 – 2020", href: "https://newrelic.com" },
@@ -50,14 +50,14 @@ export default function Home() {
           <p>
             Previously, I was a design director for Data and AI at{" "}
             <a href="https://ibm.com" target="_blank" className={link}>IBM</a>, working on agentic
-            experiences and design systems.
+            experiences and design systems. I led the team through IBM&apos;s acquisition of{" "}
+            <a href="https://datastax.com" target="_blank" className={link}>DataStax</a>, where I
+            built product experience, spanning brand and product design, technical content, and
+            product analytics.
           </p>
           <p>
-            Before that, I built the product experience team at{" "}
-            <a href="https://datastax.com" target="_blank" className={link}>DataStax</a>,
-            spanning brand and product design, technical content, and product analytics. At{" "}
-            <a href="https://newrelic.com" target="_blank" className={link}>New Relic</a>, I led
-            design for APM, infrastructure, and logs.
+            Before that, I led design for APM, infrastructure, traces, and logs at{" "}
+            <a href="https://newrelic.com" target="_blank" className={link}>New Relic</a>.
           </p>
           <p>
             I was born in Hawaii and now live in the Pacific Northwest. I&apos;m completely
