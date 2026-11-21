@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 :root {
-  --background: #080808; /* canvas */
+  --background: #131313; /* canvas */
   --foreground: #b4b4b4; /* content */
 }
 
@@ -9,7 +9,8 @@
   --color-background: var(--background);
   --color-foreground: var(--foreground);
 
-  --color-canvas: #080808; /* page background */
+  --color-canvas: #131313; /* page background */
+  --color-raised: #1f1f1f; /* logo circles, hover fill */
   --color-stroke: #333333; /* subtle lines */
   --color-stroke-strong: #474747; /* link underlines */
   --color-bright: #f4f4f4; /* emphasis: names, links */
@@ -30,4 +31,9 @@ body {
 ::selection {
   background: #767676;
   color: #000000;
+}
+
+/* v2 "smoke" sits on a darker page. */
+body:has([data-version="2"]) {
+  background: #080808;
 }
