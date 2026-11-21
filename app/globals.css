@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 :root {
-  --background: #131313; /* canvas */
+  --background: #080808; /* canvas */
   --foreground: #b4b4b4; /* content */
 }
 
@@ -9,8 +9,7 @@
   --color-background: var(--background);
   --color-foreground: var(--foreground);
 
-  --color-canvas: #131313; /* page background */
-  --color-raised: #1f1f1f; /* logo circles, hover fill */
+  --color-canvas: #080808; /* page background */
   --color-stroke: #333333; /* subtle lines */
   --color-stroke-strong: #474747; /* link underlines */
   --color-bright: #f4f4f4; /* emphasis: names, links */
