@@ -94,10 +94,27 @@ export function VersionSwitcher({ current }: { current: string }) {
         aria-expanded={open}
         aria-label={`Site version ${current}. Switch version`}
         onClick={() => setOpen((o) => !o)}
-        className="rounded-full border border-white/10 bg-black px-3 py-1.5 text-bright outline-none transition-colors hover:border-white/25 focus-visible:border-white/40"
+        className="group flex items-center rounded-full border border-white/10 bg-black px-3 py-1.5 text-bright outline-none transition-colors hover:border-white/25 focus-visible:border-white/40"
       >
+        {/* "select" slides in to the left on hover, focus, or while the menu is open. */}
+        <span
+          className={`grid transition-[grid-template-columns] duration-200 ease-out group-hover:grid-cols-[1fr] group-focus-visible:grid-cols-[1fr] motion-reduce:transition-none ${
+            open ? "grid-cols-[1fr]" : "grid-cols-[0fr]"
+          }`}
+        >
+          <span className="overflow-hidden">
+            <span
+              className={`block pr-1.5 whitespace-nowrap text-muted transition-opacity duration-200 group-hover:opacity-100 group-focus-visible:opacity-100 motion-reduce:transition-none ${
+                open ? "opacity-100" : "opacity-0"
+              }`}
+            >
+              select
+            </span>
+          </span>
+        </span>
         v{current}
       </button>
     </div>
   );
 }
+
