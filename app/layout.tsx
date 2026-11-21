@@ -8,6 +8,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://silassao.com"),
   title: "silas sao - an engineer turned designer",
   description: "silas sao is an engineer turned designer and head of design at supabase.",
   icons: {

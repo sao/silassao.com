@@ -9,7 +9,7 @@ import {
   type Transition,
 } from "motion/react";
 import { useRef, type FocusEvent } from "react";
-import { CompanyLogo } from "./company-logo";
+import { CompanyLogo } from "../../company-logo";
 
 type Role = {
   company: string;

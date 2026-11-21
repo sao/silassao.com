@@ -32,3 +32,8 @@ body {
   background: #767676;
   color: #000000;
 }
+
+/* v2 "smoke" sits on a darker page. */
+body:has([data-version="2"]) {
+  background: #080808;
+}
