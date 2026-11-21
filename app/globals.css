@@ -37,3 +37,10 @@ body {
 body:has([data-version="2"]) {
   background: #080808;
 }
+
+/* Terminal caret in the version switcher: on for half the cycle, off for half. */
+@keyframes caret-blink {
+  50% {
+    opacity: 0;
+  }
+}
