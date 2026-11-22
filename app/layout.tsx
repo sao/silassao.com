@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import { site } from "./content";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -8,9 +9,9 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://silassao.com"),
-  title: "silas sao - an engineer turned designer",
-  description: "silas sao is an engineer turned designer and head of design at supabase.",
+  metadataBase: new URL(site.url),
+  title: site.title,
+  description: site.description,
   icons: {
     icon: '/favicon.svg',
   },
